@@ -1,7 +1,7 @@
 - amount: 5000000
   currency: AAA
   op: BUY
-- amount: 5000000
+- amount: 5000000  
   currency: AAA
   op: SELL
 - amount: 1
